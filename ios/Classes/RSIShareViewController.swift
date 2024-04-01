@@ -229,7 +229,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
     }
     
     private func getFileName(from url: URL, type: SharedMediaType) -> String {
-        var name = url.lastPathComponent
+        var name = "" // url.lastPathComponent
         if name.isEmpty {
             switch type {
             case .image:
