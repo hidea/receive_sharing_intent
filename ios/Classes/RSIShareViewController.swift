@@ -206,16 +206,16 @@ open class RSIShareViewController: SLComposeServiceViewController {
         var responder = self as UIResponder?
 
         // https://stackoverflow.com/questions/27506413/share-extension-to-open-containing-app/78975759#78975759
-       // https://github.com/KasemJaffer/receive_sharing_intent/issues/324
-       if #available(iOS 18.0, *) {            
-           while (responder != nil) {
-                if (let application = responder as? UIApplication) {                       
+        // https://github.com/KasemJaffer/receive_sharing_intent/issues/324
+        if #available(iOS 18.0, *) {            
+            while (responder != nil) {
+                if let application = responder as? UIApplication {                       
                     application.open(url!, options: [:], completionHandler: nil)
                     //UIApplication.shared.open(url!, options: [:], completionHandler: nil)                  
                 }
                 responder = responder?.next
             }
-       } else {
+        } else {
             let selectorOpenURL = sel_registerName("openURL:")
             while (responder != nil) {
                 if (responder?.responds(to: selectorOpenURL))! {
@@ -224,7 +224,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
                 responder = responder!.next
             }
             extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
-       }
+        }
     }
     
     private func dismissWithError() {
