@@ -1,12 +1,9 @@
+// This file is intentionally empty for Xcode 15+ compatibility
+// The plugin is now registered directly via SwiftReceiveSharingIntentPlugin
 #import "ReceiveSharingIntentPlugin.h"
-#if __has_include(<receive_sharing_intent/receive_sharing_intent-Swift.h>)
-#import <receive_sharing_intent/receive_sharing_intent-Swift.h>
-#else
-#import "receive_sharing_intent-Swift.h"
-#endif
 
 @implementation ReceiveSharingIntentPlugin
-+ (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftReceiveSharingIntentPlugin registerWithRegistrar:registrar];
++ (void)registerWithRegistrar:(id)registrar {
+  // Swift plugin registers itself automatically
 }
 @end
