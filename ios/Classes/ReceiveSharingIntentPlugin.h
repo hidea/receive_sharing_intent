@@ -1,5 +1,4 @@
-//#import <Flutter/Flutter.h>
-@import Flutter;
+#import <Flutter/Flutter.h>
 
 @interface ReceiveSharingIntentPlugin : NSObject<FlutterPlugin>
 @end
