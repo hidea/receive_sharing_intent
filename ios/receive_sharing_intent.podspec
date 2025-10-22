@@ -18,7 +18,13 @@ A flutter plugin that enables flutter apps to receive sharing photos from other 
   # Swift-only plugin configuration for Xcode 15+
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
-    'SWIFT_VERSION' => '5.0'
+    'SWIFT_VERSION' => '5.0',
+    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)',
+    'OTHER_LDFLAGS' => '$(inherited) -framework Flutter'
+  }
+  
+  s.user_target_xcconfig = {
+    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks'
   }
 
   s.ios.deployment_target = '13.0'
