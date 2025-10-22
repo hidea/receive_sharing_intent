@@ -13,7 +13,6 @@ A flutter plugin that enables flutter apps to receive sharing photos from other 
   s.author           = { 'Kasem' => 'kasem.jaffer@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   
   # Add module map for Xcode 15+
