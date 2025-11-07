@@ -101,7 +101,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
                 }
 
                 if shouldAutoRedirectAllContents() {
-                    //saveAndRedirect()
+                    saveAndRedirect()
                 }
             }
         }
