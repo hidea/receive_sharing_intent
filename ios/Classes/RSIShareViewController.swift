@@ -101,7 +101,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
                 }
 
                 if shouldAutoRedirectAllContents() {
-                    //saveAndRedirect()
+                    saveAndRedirect()
                 }
             }
         }
@@ -141,7 +141,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
             ))
         if index == (content.attachments?.count ?? 0) - 1 {
             if shouldAutoRedirect() {
-                //saveAndRedirect()
+                saveAndRedirect()
             }
         }
     }
@@ -178,7 +178,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
 
         if index == (content.attachments?.count ?? 0) - 1 {
             if shouldAutoRedirect() {
-                //saveAndRedirect()
+                saveAndRedirect()
             }
         }
     }
@@ -197,7 +197,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
 
         if index == (content.attachments?.count ?? 0) - 1 {
             if shouldAutoRedirect() {
-                //saveAndRedirect()
+                saveAndRedirect()
             }
         }
     }
