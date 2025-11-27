@@ -245,7 +245,7 @@ open class RSIShareViewController: SLComposeServiceViewController {
     private func redirectToHostApp() {
         // ids may not loaded yet so we need loadIds here too
         loadIds()
-        let url = URL(string: "\(kSchemePrefix)-\(hostAppBundleIdentifier)://share")
+        let url = URL(string: "\(kSchemePrefix)-\(hostAppBundleIdentifier):share")
         var responder = self as UIResponder?
         // https://stackoverflow.com/questions/27506413/share-extension-to-open-containing-app/78975759#78975759
         // https://github.com/KasemJaffer/receive_sharing_intent/issues/324
